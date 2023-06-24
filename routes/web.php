@@ -25,6 +25,10 @@ Route::get('/kelola-tugas', function () {
     return view('kelola-tugas');
 })->name('kelola-tugas');
 
+Route::get('/buat-tugas', function () {
+    return view('kelola-tugas');
+})->name('kelola-tugas');
+
 Route::get('/siswa', function () {
     return view('siswa');
 })->name('siswa');
