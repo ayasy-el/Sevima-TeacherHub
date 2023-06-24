@@ -51,6 +51,8 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/logout', [SessionsController::class, 'destroy']);
 
+    Route::post('/edit-profile', [UserController::class, 'profileUpdate']);
+
     Route::get('/login', function () {
         return redirect('dashboard');
     });

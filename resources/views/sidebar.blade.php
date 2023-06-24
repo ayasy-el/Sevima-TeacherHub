@@ -133,9 +133,8 @@
                 </g>
               </g>
             </svg></span>
-            <span class="nav-link-text ms-1">Log Out</span> 
-        </button>
-        <form action="/logout" method="post">
+            <span class="nav-link-text ms-1">Log Out</span>
+          </form>
       </li>
     </ul>
   </div>
