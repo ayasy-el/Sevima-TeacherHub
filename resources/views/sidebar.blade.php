@@ -115,7 +115,9 @@
         </a>
       </li>
       <li class="nav-link mb-0">
-        <a href="/" class="btn btn-primary btn-md active px-5 text-white" target="_blank" role="button" aria-pressed="true">
+        <form action="/logout" method="get">
+          @csrf
+        <button class="btn btn-primary btn-md active px-5 text-white" role="button" aria-pressed="true">
             <span><svg width="16px" height="20px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <title>spaceship</title>
               <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -132,7 +134,8 @@
               </g>
             </svg></span>
             <span class="nav-link-text ms-1">Log Out</span> 
-        </a>
+        </button>
+        <form action="/logout" method="post">
       </li>
     </ul>
   </div>

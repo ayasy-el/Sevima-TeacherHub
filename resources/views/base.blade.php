@@ -23,17 +23,23 @@
 </head>
 
 <body class="g-sidenav-show  bg-gray-100 {{ \Request::is('rtl') ? 'rtl' : (Request::is('virtual-reality') ? 'virtual-reality' : '') }} ">
-    @include('sidebar')
-    <div class="main-content position-relative bg-gray-100 max-height-vh-100 h-100">
-        @include('nav')
-        @yield('content')
-    </div>
-    {{-- @auth
-        @yield('auth')
+    @auth
+      @include('sidebar')
+      <div class="main-content position-relative bg-gray-100 max-height-vh-100 h-100">
+          @include('nav.nav-auth')
+          @yield('content')
+      </div> 
     @endauth
     @guest
-        @yield('guest')
-    @endguest --}}
+        <div class="container position-sticky z-index-sticky top-0">
+            <div class="row">
+                <div class="col-12">
+                    @include('nav.nav-guest')
+                </div>
+            </div>
+        </div>
+        @yield('content')
+    @endguest
 
     @if (session()->has('success'))
         <div x-data="{ show: true }" x-init="setTimeout(() => show = false, 4000)" x-show="show"
