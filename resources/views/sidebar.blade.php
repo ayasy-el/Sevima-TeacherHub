@@ -84,7 +84,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link {{ (Request::is('analisis-tugas') ? 'active' : '') }}" href="{{ url('analisis-tugas') }}">
+        <a class="nav-link {{ (Request::is('analisis-siswa') ? 'active' : '') }}" href="{{ url('analisis-siswa') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <title>office</title>
@@ -100,7 +100,7 @@
               </g>
             </svg>
           </div>
-          <span class="nav-link-text ms-1">Analisis Tugas</span>
+          <span class="nav-link-text ms-1">Analisis Siswa</span>
         </a>
       </li>
       <li class="nav-item mt-3">
@@ -109,7 +109,7 @@
       <li class="nav-item">
         <a class="nav-link {{ (Request::is('edit-profile') ? 'active' : '') }}" href="{{ url('edit-profile') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="fas fa-user-edit text-dark text-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="" aria-hidden="true" data-bs-original-title="Edit Profile" aria-label="Edit Profile"></i><span class="sr-only">Edit Profile</span>
+              <i class="fas fa-user-edit {{ (Request::is('edit-profile') ? 'text-white' : 'text-dark') }} text-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="" aria-hidden="true" data-bs-original-title="Edit Profile" aria-label="Edit Profile"></i><span class="sr-only">Edit Profile</span>
           </div>
           <span class="nav-link-text ms-1">Edit Profile</span>
         </a>

@@ -26,16 +26,16 @@ Route::get('/kelola-tugas', function () {
 })->name('kelola-tugas');
 
 Route::get('/buat-tugas', function () {
-    return view('kelola-tugas');
-})->name('kelola-tugas');
+    return view('buat-tugas');
+})->name('buat-tugas');
 
 Route::get('/siswa', function () {
     return view('siswa');
 })->name('siswa');
 
-Route::get('/analisis-tugas', function () {
-    return view('analisis-tugas');
-})->name('analisis-tugas');
+Route::get('/analisis-siswa', function () {
+    return view('analisis-siswa');
+})->name('analisis-siswa');
 
 Route::get('/edit-profile', function () {
     return view('edit-profile');
