@@ -8,10 +8,10 @@
           <div class="row">
             <div class="col-8">
               <div class="numbers">
-                <p class="text-sm mb-0 text-capitalize font-weight-bold">Today's Money</p>
+                <p class="text-sm mb-0 text-capitalize font-weight-bold">Presensi Kehadiran</p>
                 <h5 class="font-weight-bolder mb-0">
-                  $53,000
-                  <span class="text-success text-sm font-weight-bolder">+55%</span>
+                  80%
+                  <span class="text-success text-sm font-weight-bolder">+20%</span>
                 </h5>
               </div>
             </div>
@@ -30,9 +30,9 @@
           <div class="row">
             <div class="col-8">
               <div class="numbers">
-                <p class="text-sm mb-0 text-capitalize font-weight-bold">Today's Users</p>
+                <p class="text-sm mb-0 text-capitalize font-weight-bold">Evaluasi Tugas</p>
                 <h5 class="font-weight-bolder mb-0">
-                  2,300
+                  40%
                   <span class="text-success text-sm font-weight-bolder">+3%</span>
                 </h5>
               </div>
@@ -52,9 +52,9 @@
           <div class="row">
             <div class="col-8">
               <div class="numbers">
-                <p class="text-sm mb-0 text-capitalize font-weight-bold">New Clients</p>
+                <p class="text-sm mb-0 text-capitalize font-weight-bold">Kinerja akademik</p>
                 <h5 class="font-weight-bolder mb-0">
-                  +3,462
+                  75%
                   <span class="text-danger text-sm font-weight-bolder">-2%</span>
                 </h5>
               </div>
@@ -74,10 +74,10 @@
           <div class="row">
             <div class="col-8">
               <div class="numbers">
-                <p class="text-sm mb-0 text-capitalize font-weight-bold">Sales</p>
+                <p class="text-sm mb-0 text-capitalize font-weight-bold">Kolaborasi dan interaksi</p>
                 <h5 class="font-weight-bolder mb-0">
-                  $103,430
-                  <span class="text-success text-sm font-weight-bolder">+5%</span>
+                  20%
+                  <span class="text-danger text-sm font-weight-bolder">-5%</span>
                 </h5>
               </div>
             </div>
@@ -121,9 +121,9 @@
                       </g>
                     </svg>
                   </div>
-                  <p class="text-xs mt-1 mb-0 font-weight-bold">Users</p>
+                  <p class="text-xs mt-1 mb-0 font-weight-bold">Scores</p>
                 </div>
-                <h4 class="font-weight-bolder">36K</h4>
+                <h4 class="font-weight-bolder">85%</h4>
                 <div class="progress w-75">
                   <div class="progress-bar bg-dark w-60" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
@@ -147,9 +147,9 @@
                       </g>
                     </svg>
                   </div>
-                  <p class="text-xs mt-1 mb-0 font-weight-bold">Clicks</p>
+                  <p class="text-xs mt-1 mb-0 font-weight-bold">feedback</p>
                 </div>
-                <h4 class="font-weight-bolder">2m</h4>
+                <h4 class="font-weight-bolder">4.2/5</h4>
                 <div class="progress w-75">
                   <div class="progress-bar bg-dark w-90" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
@@ -171,9 +171,9 @@
                       </g>
                     </svg>
                   </div>
-                  <p class="text-xs mt-1 mb-0 font-weight-bold">Sales</p>
+                  <p class="text-xs mt-1 mb-0 font-weight-bold">Resources</p>
                 </div>
-                <h4 class="font-weight-bolder">435$</h4>
+                <h4 class="font-weight-bolder">120</h4>
                 <div class="progress w-75">
                   <div class="progress-bar bg-dark w-30" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
@@ -196,9 +196,9 @@
                       </g>
                     </svg>
                   </div>
-                  <p class="text-xs mt-1 mb-0 font-weight-bold">Items</p>
+                  <p class="text-xs mt-1 mb-0 font-weight-bold">Progress</p>
                 </div>
-                <h4 class="font-weight-bolder">43</h4>
+                <h4 class="font-weight-bolder">43%</h4>
                 <div class="progress w-75">
                   <div class="progress-bar bg-dark w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
@@ -211,7 +211,7 @@
     <div class="col-lg-7">
       <div class="card z-index-2">
         <div class="card-header pb-0">
-          <h6>Sales overview</h6>
+          <h6>Achievement overview</h6>
           <p class="text-sm">
             <i class="fa fa-arrow-up text-success"></i>
             <span class="font-weight-bold">4% more</span> in 2021
@@ -231,7 +231,7 @@
         <div class="card-header pb-0">
           <div class="row">
             <div class="col-lg-6 col-7">
-              <h6>Projects</h6>
+              <h6>Tugas</h6>
               <p class="text-sm mb-0">
                 <i class="fa fa-check text-info" aria-hidden="true"></i>
                 <span class="font-weight-bold ms-1">30 done</span> this month
@@ -256,9 +256,9 @@
             <table class="table align-items-center mb-0">
               <thead>
                 <tr>
-                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Companies</th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Assessment</th>
                   <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Members</th>
-                  <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Budget</th>
+                  <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Rata-Rata</th>
                   <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Completion</th>
                 </tr>
               </thead>
@@ -266,11 +266,8 @@
                 <tr>
                   <td>
                     <div class="d-flex px-2 py-1">
-                      <div>
-                        <img src="../assets/img/small-logos/logo-xd.svg" class="avatar avatar-sm me-3" alt="xd">
-                      </div>
                       <div class="d-flex flex-column justify-content-center">
-                        <h6 class="mb-0 text-sm">Soft UI XD Version</h6>
+                        <h6 class="mb-0 text-sm">Pre Test</h6>
                       </div>
                     </div>
                   </td>
@@ -291,7 +288,7 @@
                     </div>
                   </td>
                   <td class="align-middle text-center text-sm">
-                    <span class="text-xs font-weight-bold"> $14,000 </span>
+                    <span class="text-xs font-weight-bold"> 85 </span>
                   </td>
                   <td class="align-middle">
                     <div class="progress-wrapper w-75 mx-auto">
@@ -309,11 +306,8 @@
                 <tr>
                   <td>
                     <div class="d-flex px-2 py-1">
-                      <div>
-                        <img src="../assets/img/small-logos/logo-atlassian.svg" class="avatar avatar-sm me-3" alt="atlassian">
-                      </div>
                       <div class="d-flex flex-column justify-content-center">
-                        <h6 class="mb-0 text-sm">Add Progress Track</h6>
+                        <h6 class="mb-0 text-sm">Praktek 1</h6>
                       </div>
                     </div>
                   </td>
@@ -328,7 +322,7 @@
                     </div>
                   </td>
                   <td class="align-middle text-center text-sm">
-                    <span class="text-xs font-weight-bold"> $3,000 </span>
+                    <span class="text-xs font-weight-bold"> 75 </span>
                   </td>
                   <td class="align-middle">
                     <div class="progress-wrapper w-75 mx-auto">
@@ -346,11 +340,8 @@
                 <tr>
                   <td>
                     <div class="d-flex px-2 py-1">
-                      <div>
-                        <img src="../assets/img/small-logos/logo-slack.svg" class="avatar avatar-sm me-3" alt="team7">
-                      </div>
                       <div class="d-flex flex-column justify-content-center">
-                        <h6 class="mb-0 text-sm">Fix Platform Errors</h6>
+                        <h6 class="mb-0 text-sm">Ulangan Harian 1</h6>
                       </div>
                     </div>
                   </td>
@@ -365,7 +356,7 @@
                     </div>
                   </td>
                   <td class="align-middle text-center text-sm">
-                    <span class="text-xs font-weight-bold"> Not set </span>
+                    <span class="text-xs font-weight-bold"> 88 </span>
                   </td>
                   <td class="align-middle">
                     <div class="progress-wrapper w-75 mx-auto">
@@ -383,11 +374,8 @@
                 <tr>
                   <td>
                     <div class="d-flex px-2 py-1">
-                      <div>
-                        <img src="../assets/img/small-logos/logo-spotify.svg" class="avatar avatar-sm me-3" alt="spotify">
-                      </div>
                       <div class="d-flex flex-column justify-content-center">
-                        <h6 class="mb-0 text-sm">Launch our Mobile App</h6>
+                        <h6 class="mb-0 text-sm">Penilaian Tengah Semester</h6>
                       </div>
                     </div>
                   </td>
@@ -408,7 +396,7 @@
                     </div>
                   </td>
                   <td class="align-middle text-center text-sm">
-                    <span class="text-xs font-weight-bold"> $20,500 </span>
+                    <span class="text-xs font-weight-bold"> 83 </span>
                   </td>
                   <td class="align-middle">
                     <div class="progress-wrapper w-75 mx-auto">
@@ -426,11 +414,8 @@
                 <tr>
                   <td>
                     <div class="d-flex px-2 py-1">
-                      <div>
-                        <img src="../assets/img/small-logos/logo-jira.svg" class="avatar avatar-sm me-3" alt="jira">
-                      </div>
                       <div class="d-flex flex-column justify-content-center">
-                        <h6 class="mb-0 text-sm">Add the New Pricing Page</h6>
+                        <h6 class="mb-0 text-sm">Remidial</h6>
                       </div>
                     </div>
                   </td>
@@ -442,7 +427,7 @@
                     </div>
                   </td>
                   <td class="align-middle text-center text-sm">
-                    <span class="text-xs font-weight-bold"> $500 </span>
+                    <span class="text-xs font-weight-bold"> 78 </span>
                   </td>
                   <td class="align-middle">
                     <div class="progress-wrapper w-75 mx-auto">
@@ -460,11 +445,8 @@
                 <tr>
                   <td>
                     <div class="d-flex px-2 py-1">
-                      <div>
-                        <img src="../assets/img/small-logos/logo-invision.svg" class="avatar avatar-sm me-3" alt="invision">
-                      </div>
                       <div class="d-flex flex-column justify-content-center">
-                        <h6 class="mb-0 text-sm">Redesign New Online Shop</h6>
+                        <h6 class="mb-0 text-sm">Praktek 2</h6>
                       </div>
                     </div>
                   </td>
@@ -479,7 +461,7 @@
                     </div>
                   </td>
                   <td class="align-middle text-center text-sm">
-                    <span class="text-xs font-weight-bold"> $2,000 </span>
+                    <span class="text-xs font-weight-bold"> 82 </span>
                   </td>
                   <td class="align-middle">
                     <div class="progress-wrapper w-75 mx-auto">
@@ -503,7 +485,7 @@
     <div class="col-lg-4 col-md-6">
       <div class="card h-100">
         <div class="card-header pb-0">
-          <h6>Orders overview</h6>
+          <h6>Calendar overview</h6>
           <p class="text-sm">
             <i class="fa fa-arrow-up text-success" aria-hidden="true"></i>
             <span class="font-weight-bold">24%</span> this month
@@ -516,8 +498,8 @@
                 <i class="ni ni-bell-55 text-success text-gradient"></i>
               </span>
               <div class="timeline-content">
-                <h6 class="text-dark text-sm font-weight-bold mb-0">$2400, Design changes</h6>
-                <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">22 DEC 7:20 PM</p>
+                <h6 class="text-dark text-sm font-weight-bold mb-0">Ulangan Harian</h6>
+                <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">20 Sept 2022</p>
               </div>
             </div>
             <div class="timeline-block mb-3">
@@ -525,8 +507,8 @@
                 <i class="ni ni-html5 text-danger text-gradient"></i>
               </span>
               <div class="timeline-content">
-                <h6 class="text-dark text-sm font-weight-bold mb-0">New order #1832412</h6>
-                <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">21 DEC 11 PM</p>
+                <h6 class="text-dark text-sm font-weight-bold mb-0">Penilaian Tengah Semester</h6>
+                <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">28 Sept 2022</p>
               </div>
             </div>
             <div class="timeline-block mb-3">
@@ -534,8 +516,8 @@
                 <i class="ni ni-cart text-info text-gradient"></i>
               </span>
               <div class="timeline-content">
-                <h6 class="text-dark text-sm font-weight-bold mb-0">Server payments for April</h6>
-                <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">21 DEC 9:34 PM</p>
+                <h6 class="text-dark text-sm font-weight-bold mb-0">Remidial</h6>
+                <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">10 OCT 2022</p>
               </div>
             </div>
             <div class="timeline-block mb-3">
@@ -543,8 +525,8 @@
                 <i class="ni ni-credit-card text-warning text-gradient"></i>
               </span>
               <div class="timeline-content">
-                <h6 class="text-dark text-sm font-weight-bold mb-0">New card added for order #4395133</h6>
-                <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">20 DEC 2:20 AM</p>
+                <h6 class="text-dark text-sm font-weight-bold mb-0">Ulangan Harian 2</h6>
+                <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">20 OCT 2022</p>
               </div>
             </div>
             <div class="timeline-block mb-3">
@@ -552,8 +534,8 @@
                 <i class="ni ni-key-25 text-primary text-gradient"></i>
               </span>
               <div class="timeline-content">
-                <h6 class="text-dark text-sm font-weight-bold mb-0">Unlock packages for development</h6>
-                <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">18 DEC 4:54 AM</p>
+                <h6 class="text-dark text-sm font-weight-bold mb-0">Ulangan Harian 3</h6>
+                <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">1 NOV 2022</p>
               </div>
             </div>
             <div class="timeline-block">
@@ -561,8 +543,8 @@
                 <i class="ni ni-money-coins text-dark text-gradient"></i>
               </span>
               <div class="timeline-content">
-                <h6 class="text-dark text-sm font-weight-bold mb-0">New order #9583120</h6>
-                <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">17 DEC</p>
+                <h6 class="text-dark text-sm font-weight-bold mb-0">Penilaian Akhir Semester</h6>
+                <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">28 NOV 2022</p>
               </div>
             </div>
           </div>

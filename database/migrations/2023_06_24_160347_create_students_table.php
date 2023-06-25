@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('email')->unique();
             $table->string('class');
-            $table->boolean('is_online');
+            $table->boolean('is_online')->nullable();
             $table->text('report');
             $table->timestamps();
         });
