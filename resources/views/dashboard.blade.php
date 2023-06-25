@@ -19,7 +19,7 @@
                 {{ Auth::user()->name }}
               </h5>
               <p class="mb-0 font-weight-bold text-sm">
-                Guru Matematika
+                {{ Auth::user()->jabatan }}
               </p>
             </div>
           </div>
@@ -101,7 +101,7 @@
                   <h6 class="mb-0">Profile Information</h6>
                 </div>
                 <div class="col-md-4 text-end">
-                  <a href="javascript:;">
+                  <a href="/edit-profile">
                     <i class="fas fa-user-edit text-secondary text-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Profile"></i>
                   </a>
                 </div>
@@ -109,14 +109,14 @@
             </div>
             <div class="card-body p-3">
               <p class="text-sm">
-                Hi, I’m Alec Thompson, Decisions: If you can’t decide, the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality).
+                {{ Auth::user()->about_me }}
               </p>
               <hr class="horizontal gray-light my-4">
               <ul class="list-group">
-                <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong class="text-dark">Full Name:</strong> &nbsp; Alec M. Thompson</li>
-                <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Mobile:</strong> &nbsp; (44) 123 1234 123</li>
-                <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Email:</strong> &nbsp; alecthompson@mail.com</li>
-                <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Location:</strong> &nbsp; USA</li>
+                <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong class="text-dark">Full Name:</strong> &nbsp; {{ Auth::user()->name }}</li>
+                <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Mobile:</strong> &nbsp; @if (strtolower(Auth::user()->location) == 'indonesia')(+62) @endif{{ Auth::user()->phone }}</li>
+                <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Email:</strong> &nbsp; {{ Auth::user()->email }}</li>
+                <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Location:</strong> &nbsp; {{ Auth::user()->location }}</li>
                 <li class="list-group-item border-0 ps-0 pb-0">
                   <strong class="text-dark text-sm">Social:</strong> &nbsp;
                   <a class="btn btn-facebook btn-simple mb-0 ps-1 pe-2 py-0" href="javascript:;">
@@ -214,7 +214,7 @@
                 <div class="d-flex align-items-center">
                   <button class="btn btn-icon-only btn-rounded btn-outline-danger mb-0 me-3 btn-sm d-flex align-items-center justify-content-center"><i class="fas fa-arrow-down"></i></button>
                   <div class="d-flex flex-column">
-                    <h6 class="mb-1 text-dark text-sm">Netflix</h6>
+                    <h6 class="mb-1 text-dark text-sm">Andika Prasetya</h6>
                     <span class="text-xs">27 March 2020, at 12:30 PM</span>
                   </div>
                 </div>
@@ -223,7 +223,7 @@
                 <div class="d-flex align-items-center">
                   <button class="btn btn-icon-only btn-rounded btn-outline-success mb-0 me-3 btn-sm d-flex align-items-center justify-content-center"><i class="fas fa-arrow-up"></i></button>
                   <div class="d-flex flex-column">
-                    <h6 class="mb-1 text-dark text-sm">Apple</h6>
+                    <h6 class="mb-1 text-dark text-sm">Mahmod Ali</h6>
                     <span class="text-xs">27 March 2020, at 04:30 AM</span>
                   </div>
                 </div>
@@ -232,7 +232,7 @@
                 <div class="d-flex align-items-center">
                   <button class="btn btn-icon-only btn-rounded btn-outline-success mb-0 me-3 btn-sm d-flex align-items-center justify-content-center"><i class="fas fa-arrow-up"></i></button>
                   <div class="d-flex flex-column">
-                    <h6 class="mb-1 text-dark text-sm">Stripe</h6>
+                    <h6 class="mb-1 text-dark text-sm">Zaki Ammar</h6>
                     <span class="text-xs">26 March 2020, at 13:45 PM</span>
                   </div>
                 </div>
@@ -241,7 +241,7 @@
                 <div class="d-flex align-items-center">
                   <button class="btn btn-icon-only btn-rounded btn-outline-success mb-0 me-3 btn-sm d-flex align-items-center justify-content-center"><i class="fas fa-arrow-up"></i></button>
                   <div class="d-flex flex-column">
-                    <h6 class="mb-1 text-dark text-sm">HubSpot</h6>
+                    <h6 class="mb-1 text-dark text-sm">Faiz El Rahmat</h6>
                     <span class="text-xs">26 March 2020, at 12:30 PM</span>
                   </div>
                 </div>
@@ -253,30 +253,30 @@
         <div class="col-12 mt-4">
           <div class="card mb-4">
             <div class="card-header pb-0 p-3">
-              <h6 class="mb-1">Projects</h6>
-              <p class="text-sm">Architects design houses</p>
+              <h6 class="mb-1">Materi</h6>
+              <p class="text-sm">Materi Pembelajaran</p>
             </div>
             <div class="card-body p-3">
               <div class="row">
-                <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
+                @foreach ($materi as $mtr)             
+                <div class="col-xl-3 col-md-6 mb-xl-0 mb-10">
                   <div class="card card-blog card-plain">
                     <div class="position-relative">
-                      <a class="d-block shadow-xl border-radius-xl">
+                      {{-- <a class="d-block shadow-xl border-radius-xl">
                         <img src="../assets/img/home-decor-1.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
-                      </a>
+                      </a> --}}
                     </div>
                     <div class="card-body px-1 pb-0">
-                      <p class="text-gradient text-dark mb-2 text-sm">Project #2</p>
-                      <a href="javascript:;">
+                      <a href="/materi/{{ $mtr->id }}">
                         <h5>
-                          Modern
+                          {{ $mtr->title }}
                         </h5>
                       </a>
                       <p class="mb-4 text-sm">
-                        As Uber works through a huge amount of internal management turmoil.
+                        {{ substr(strip_tags($mtr->content),0,100) }}...
                       </p>
                       <div class="d-flex align-items-center justify-content-between">
-                        <button type="button" class="btn btn-outline-primary btn-sm mb-0">View Project</button>
+                        <a href="/materi/{{ $mtr->id }}" class="btn btn-outline-primary btn-sm mb-0">Read More</a>
                         <div class="avatar-group mt-2">
                           <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Elena Morison">
                             <img alt="Image placeholder" src="../assets/img/team-1.jpg">
@@ -295,86 +295,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
-                  <div class="card card-blog card-plain">
-                    <div class="position-relative">
-                      <a class="d-block shadow-xl border-radius-xl">
-                        <img src="../assets/img/home-decor-2.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
-                      </a>
-                    </div>
-                    <div class="card-body px-1 pb-0">
-                      <p class="text-gradient text-dark mb-2 text-sm">Project #1</p>
-                      <a href="javascript:;">
-                        <h5>
-                          Scandinavian
-                        </h5>
-                      </a>
-                      <p class="mb-4 text-sm">
-                        Music is something that every person has his or her own specific opinion about.
-                      </p>
-                      <div class="d-flex align-items-center justify-content-between">
-                        <button type="button" class="btn btn-outline-primary btn-sm mb-0">View Project</button>
-                        <div class="avatar-group mt-2">
-                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Nick Daniel">
-                            <img alt="Image placeholder" src="../assets/img/team-3.jpg">
-                          </a>
-                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Peterson">
-                            <img alt="Image placeholder" src="../assets/img/team-4.jpg">
-                          </a>
-                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Elena Morison">
-                            <img alt="Image placeholder" src="../assets/img/team-1.jpg">
-                          </a>
-                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ryan Milly">
-                            <img alt="Image placeholder" src="../assets/img/team-2.jpg">
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
-                  <div class="card card-blog card-plain">
-                    <div class="position-relative">
-                      <a class="d-block shadow-xl border-radius-xl">
-                        <img src="../assets/img/home-decor-3.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
-                      </a>
-                    </div>
-                    <div class="card-body px-1 pb-0">
-                      <p class="text-gradient text-dark mb-2 text-sm">Project #3</p>
-                      <a href="javascript:;">
-                        <h5>
-                          Minimalist
-                        </h5>
-                      </a>
-                      <p class="mb-4 text-sm">
-                        Different people have different taste, and various types of music.
-                      </p>
-                      <div class="d-flex align-items-center justify-content-between">
-                        <button type="button" class="btn btn-outline-primary btn-sm mb-0">View Project</button>
-                        <div class="avatar-group mt-2">
-                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Peterson">
-                            <img alt="Image placeholder" src="../assets/img/team-4.jpg">
-                          </a>
-                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Nick Daniel">
-                            <img alt="Image placeholder" src="../assets/img/team-3.jpg">
-                          </a>
-                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ryan Milly">
-                            <img alt="Image placeholder" src="../assets/img/team-2.jpg">
-                          </a>
-                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Elena Morison">
-                            <img alt="Image placeholder" src="../assets/img/team-1.jpg">
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
+                @endforeach
+                <div class="col-xl-3 col-md-6 mb-xl-0 mt-4 mb-10">
                   <div class="card h-100 card-plain border">
                     <div class="card-body d-flex flex-column justify-content-center text-center">
-                      <a href="javascript:;">
+                      <a href="/buat-materi">
                         <i class="fa fa-plus text-secondary mb-3"></i>
-                        <h5 class=" text-secondary"> New project </h5>
+                        <h5 class=" text-secondary"> Buat Materi </h5>
                       </a>
                     </div>
                   </div>

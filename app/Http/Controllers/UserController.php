@@ -11,14 +11,26 @@ class UserController extends Controller
 {
     public function profileUpdate(Request $request)
     {
-        $input = $request->validate([
-            'name' => ['max:25'],
-            'email' => ['email:dns', 'max:50', Rule::unique('users', 'email')],
-            'phone' => [],
-            'location' => [],
-            'jabatan' => [],
-            'about_me' => [],
-        ]);
+        if ($request['email'] == Auth::user()->email) {
+            $input = $request->validate([
+                'name' => ['max:25'],
+                'email' => ['email:dns', 'max:50'],
+                'phone' => [],
+                'location' => [],
+                'jabatan' => [],
+                'about_me' => [],
+            ]);
+        } else {
+            $input = $request->validate([
+                'name' => ['max:25'],
+                'email' => ['email:dns', 'max:50', Rule::unique('users', 'email')],
+                'phone' => [],
+                'location' => [],
+                'jabatan' => [],
+                'about_me' => [],
+            ]);
+        }
+
 
         Auth::user()->update($input);
         return Redirect('/dashboard');

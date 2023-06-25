@@ -6,46 +6,28 @@
       <div class="col-md-7 mt-4">
         <div class="card">
           <div class="card-header pb-0 px-3">
-            <h6 class="mb-0">Drafts</h6>
+            <h6 class="mb-0">Materi Saya</h6>
           </div>
-          <div class="card-body pt-4 p-3">
+          <div style="height: 550px;" class="overflow-auto card-body pt-4 p-3">
             <ul class="list-group">
+            @foreach ($materi as $mtr)
               <li class="list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
                 <div class="d-flex flex-column">
-                  <h6 class="mb-3 text-sm">Oliver Liam</h6>
-                  <span class="mb-2 text-xs">Company Name: <span class="text-dark font-weight-bold ms-sm-2">Viking Burrito</span></span>
-                  <span class="mb-2 text-xs">Email Address: <span class="text-dark ms-sm-2 font-weight-bold">oliver@burrito.com</span></span>
-                  <span class="text-xs">VAT Number: <span class="text-dark ms-sm-2 font-weight-bold">FRB1235476</span></span>
+                  <h6 class="mb-3 text-sm">{{ $mtr->title }}</h6>
+                  <span class="mb-2 text-xs"><span class="text-dark font-weight-bold ms-sm-2">{{ substr(strip_tags($mtr->content),0,100) }}...</span></span>
+                  {{-- <span class="mb-2 text-xs">Email Address: <span class="text-dark ms-sm-2 font-weight-bold">oliver@burrito.com</span></span>
+                  <span class="text-xs">VAT Number: <span class="text-dark ms-sm-2 font-weight-bold">FRB1235476</span></span> --}}
                 </div>
                 <div class="ms-auto text-end">
-                  <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="javascript:;"><i class="far fa-trash-alt me-2"></i>Delete</a>
-                  <a class="btn btn-link text-dark px-3 mb-0" href="javascript:;"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>Edit</a>
+                <form style="display: inline" action="/delete-materi/{{ $mtr->id }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button class="btn btn-link text-danger text-gradient px-3 mb-0"><i class="far fa-trash-alt me-2"></i>Delete</button>
+                </form>
+                  <a class="btn btn-link text-dark px-3 mb-0" href="/edit-materi/{{ $mtr->id }}"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>Edit</a>
                 </div>
               </li>
-              <li class="list-group-item border-0 d-flex p-4 mb-2 mt-3 bg-gray-100 border-radius-lg">
-                <div class="d-flex flex-column">
-                  <h6 class="mb-3 text-sm">Lucas Harper</h6>
-                  <span class="mb-2 text-xs">Company Name: <span class="text-dark font-weight-bold ms-sm-2">Stone Tech Zone</span></span>
-                  <span class="mb-2 text-xs">Email Address: <span class="text-dark ms-sm-2 font-weight-bold">lucas@stone-tech.com</span></span>
-                  <span class="text-xs">VAT Number: <span class="text-dark ms-sm-2 font-weight-bold">FRB1235476</span></span>
-                </div>
-                <div class="ms-auto text-end">
-                  <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="javascript:;"><i class="far fa-trash-alt me-2"></i>Delete</a>
-                  <a class="btn btn-link text-dark px-3 mb-0" href="javascript:;"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>Edit</a>
-                </div>
-              </li>
-              <li class="list-group-item border-0 d-flex p-4 mb-2 mt-3 bg-gray-100 border-radius-lg">
-                <div class="d-flex flex-column">
-                  <h6 class="mb-3 text-sm">Ethan James</h6>
-                  <span class="mb-2 text-xs">Company Name: <span class="text-dark font-weight-bold ms-sm-2">Fiber Notion</span></span>
-                  <span class="mb-2 text-xs">Email Address: <span class="text-dark ms-sm-2 font-weight-bold">ethan@fiber.com</span></span>
-                  <span class="text-xs">VAT Number: <span class="text-dark ms-sm-2 font-weight-bold">FRB1235476</span></span>
-                </div>
-                <div class="ms-auto text-end">
-                  <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="javascript:;"><i class="far fa-trash-alt me-2"></i>Delete</a>
-                  <a class="btn btn-link text-dark px-3 mb-0" href="javascript:;"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>Edit</a>
-                </div>
-              </li>
+            @endforeach
             </ul>
           </div>
         </div>
@@ -55,7 +37,7 @@
           <div class="card-header pb-0 px-3">
             <div class="row">
                 <div class="col-6 d-flex align-items-center">
-                  <h6 class="mb-0">Dikumpulkan</h6>
+                  <h6 class="mb-0">File Upload Siswa</h6>
                 </div>
                 <div class="col-6 text-end">
                   <button class="btn btn-outline-primary btn-sm mb-0">View All</button>
@@ -123,7 +105,7 @@
           <div class="card-header pb-0">
                 <div class="d-flex flex-row justify-content-between">
                     <div>
-                        <h5 class="mb-0">Tugas</h5>
+                        <h5 class="mb-0">Siswa yang Telah Mengumpulkan Tugas</h5>
                     </div>
                     <a href="#" class="btn bg-gradient-primary btn-sm mb-0" type="button">+&nbsp; New User</a>
                 </div>

@@ -30,18 +30,18 @@
         </a>
       </li>
       <li class="nav-item mt-2">
-        <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Manajemen Tugas</h6>
+        <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Manajemen Materi</h6>
       </li>
       <li class="nav-item">
-        <a class="nav-link {{ (Request::is('kelola-tugas') ? 'active' : '') }}" href="{{ url('kelola-tugas') }}">
+        <a class="nav-link {{ (Request::is('kelola-pembelajaran') ? 'active' : '') }}" href="{{ url('kelola-pembelajaran') }}">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-                <i style="font-size: 1rem;" class="fas fa-lg fa-list-ul ps-2 pe-2 text-center text-dark {{ (Request::is('kelola-tugas') ? 'text-white' : 'text-dark') }} " aria-hidden="true"></i>
+                <i style="font-size: 1rem;" class="fas fa-lg fa-list-ul ps-2 pe-2 text-center text-dark {{ (Request::is('kelola-pembelajaran') ? 'text-white' : 'text-dark') }} " aria-hidden="true"></i>
             </div>
-            <span class="nav-link-text ms-1">Kelola Tugas</span>
+            <span class="nav-link-text ms-1">Kelola Pembelajaran</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link {{ (Request::is('buat-tugas') ? 'active' : '') }}" href="{{ url('buat-tugas') }}">
+        <a class="nav-link {{ (Request::is('buat-materi') ? 'active' : '') }}" href="{{ url('buat-materi') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <svg width="12px" height="12px" viewBox="0 0 40 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -56,7 +56,7 @@
               </g>
             </svg>
           </div>
-          <span class="nav-link-text ms-1">Buat Tugas</span>
+          <span class="nav-link-text ms-1">Buat Materi</span>
         </a>
       </li>
       <li class="nav-item mt-2">

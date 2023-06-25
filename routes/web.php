@@ -3,8 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\MateriController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
+use App\Models\Materi;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,18 +22,29 @@ use App\Http\Controllers\SessionsController;
 Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/', [HomeController::class, 'home']);
+    Route::get('/dashboard', [HomeController::class, 'home'])->name('dashboard');
 
-    Route::get('/dashboard', function () {
-        return view('dashboard', []);
-    })->name('dashboard');
+    Route::get('/kelola-pembelajaran', function () {
+        return view('kelola-pembelajaran', [
+            'materi' => Materi::all()
+        ]);
+    })->name('kelola-pembelajaran');
 
-    Route::get('/kelola-tugas', function () {
-        return view('kelola-tugas');
-    })->name('kelola-tugas');
+    Route::get('/buat-materi', function () {
+        return view('buat-materi');
+    })->name('buat-materi');
 
-    Route::get('/buat-tugas', function () {
-        return view('buat-tugas');
-    })->name('buat-tugas');
+    Route::get('/materi/{id}', function ($id) {
+        return view('materi', [
+            'materi' => Materi::find($id),
+        ]);
+    });
+
+    Route::get('/edit-materi/{id}', function ($id) {
+        return view('buat-materi', [
+            'materi' => Materi::find($id),
+        ]);
+    });
 
     Route::get('/siswa', function () {
         return view('siswa');
@@ -52,6 +65,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/logout', [SessionsController::class, 'destroy']);
 
     Route::post('/edit-profile', [UserController::class, 'profileUpdate']);
+    Route::post('/buat-materi', [MateriController::class, 'create']);
+    Route::post('/edit-materi/{id}', [MateriController::class, 'edit']);
+    Route::delete('/delete-materi/{id}', [MateriController::class, 'delete']);
 
     Route::get('/login', function () {
         return redirect('dashboard');
